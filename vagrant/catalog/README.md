@@ -4,11 +4,16 @@
 
 This application requires [`Python3`](https://www.python.org/download/releases/3.0/) and installation of the following libraries:
     
-    Flask
+    flask
+    oauth2client
+    sqlalchemy
     requests
-    httplib2
-    SQLAlchemy
-    google_api_python_client
+
+
+If you are using Vagrant, these should already be installed in your virtual machine.
+Otherwise these can be installed using the `requirements.txt` file and `pip3`:
+
+    pip3 install -r requirements.txt
 
 1) Once evertying is installed, create the database file by running `python3 database_setup.py`.
 2) Then start the application using `python3 app.py`

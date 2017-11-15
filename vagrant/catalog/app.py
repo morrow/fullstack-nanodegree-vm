@@ -62,8 +62,9 @@ def findItemBySlug(category_slug, item_slug):
     """ Find item by category and item slug. """
     category = findCategoryBySlug(category_slug)
     if category:
-        return session.query(Item).filter_by(category_id=category.id,
-                                             slug=item_slug).first()
+        return session.query(Item).filter_by(
+            category_id=category.id,
+            slug=item_slug).first()  # pep8 E501
     return None
 
 
